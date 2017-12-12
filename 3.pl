@@ -9,8 +9,8 @@
 a(X, R1) :- R1 is sqrt(abs(X)).
 b(Y, R2) :- R2 is cos(Y) + 2.
 
-funcFirstTask(X, Y, R1, R2, F) :- a(X, R1),
-                                  b(Y, R2),
-                                  F is 3*Y * R1 + sin(X*Y) * R2.
+funcFirstTask(X, Y, A, B, F) :- a(X, A),
+                                b(Y, B),
+                                F is 3*Y * A + sin(X*Y) * B.
  
 funcSecondTask(X, Y, F) :- F is 3*Y * sqrt(abs(X)) + sin(X*Y) * (cos(Y) + 2).
