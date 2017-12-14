@@ -19,6 +19,11 @@ win(romazanov, kalchenko).
 win(yanvarev, chiolkovskiy).
 win(kalchenko, gagarin).
 
-classifyAthletes() :- win(X, _), win(_, X), write(X), writeln(" - fighter").
-classifyAthletes() :- win(X, _), not(win(_, X)), write(X), writeln(" - winner").
-classifyAthletes() :- win(_, X), not(win(X, _)), write(X), writeln(" - sportsman").
+classifyAthletes() :- win(X, _), win(_, X),
+                      write(X), writeln(" - fighter").
+                      
+classifyAthletes() :- win(X, _), not(win(_, X)),
+                      write(X), writeln(" - winner").
+
+classifyAthletes() :- win(_, X), not(win(X, _)),
+                      write(X), writeln(" - sportsman").

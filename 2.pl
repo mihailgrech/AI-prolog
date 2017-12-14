@@ -36,7 +36,7 @@ spousesFamiliar(A_SP, B_SP) :- employee(ID1, A, _, _, D),
                                employee(ID2, B, _, _, D),
                                family(ID1, A_SP, _),
                                family(ID2, B_SP, _),
-                                A \= B.
+                               A \= B.
     
 firstDepartment(ID, F) :- employee(ID, F, _, _, 1). 
 
