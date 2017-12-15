@@ -16,5 +16,4 @@ convert(9, "nine").
 
 convert([],[]).
 convert([H|T], [X|Y]) :- convert(H, X),
-                         convert(T, Y),
-                         write(Y).
+                         convert(T, Y).

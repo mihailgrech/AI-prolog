@@ -1,0 +1,7 @@
+appleTree(papirovka, summer).
+appleTree(melba, summer).
+appleTree(antonovka, winter).
+appleTree(yelsy, summer).
+pearTree(lada, summer).
+pearTree(moscovskaya, summer).
+pearTree(chizovskaya, autumn).

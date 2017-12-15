@@ -17,7 +17,7 @@ man(egor).
 woman(sonya).
 woman(elena).
 
-:- initialization((findMenElder18(A, N))).
+:- initialization((findMenElder18(_, _))).
 
 findMenElder18(Age, Name) :-
     age(Name, Age),

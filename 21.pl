@@ -22,7 +22,7 @@ stringLen([_|T], Len) :- stringLen(T, LenTemp),
 readFile(Stream, []) :- at_end_of_stream(Stream).
     
 readFile(Stream, [X|L]) :- \+ at_end_of_stream(Stream),
-                           read(Stream, X),
+                           read_string(Stream, "\n", "\r\t", _, X),
                            readFile(Stream, L).
     
 % https://stackoverflow.com/questions/4805601/read-a-file-line-by-line-in-prolog

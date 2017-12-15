@@ -15,6 +15,7 @@ parent(marina, mikhail).
 parent(vitaly, mikhail).
 parent(luydmila, marina).
 parent(luydmila, elena).
+parent(luydmila, lesha).
 parent(galina, vitaly).
 
 % Is X C's sister (and so on)

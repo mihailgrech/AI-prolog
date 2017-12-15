@@ -3,8 +3,7 @@
 */
 
 calcStringLen(Str, Len) :- atom_chars(Str, Vars),
-                           stringLen(Vars, Len),
-                           writeln(Len).
+                           stringLen(Vars, Len).
 
 stringLen([], 0).
 stringLen([_|T], Len) :- stringLen(T, LenTemp),
