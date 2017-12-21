@@ -28,16 +28,17 @@ hairColor(andrey, redhaired).
 hairColor(sveta, blond).
 hairColor(nastya, brunette).
 
-cityVisited([ufa], vasya).
-cityVisited([samara], petya).
-cityVisited([kransodar, moscow], sergey).
-cityVisited([st-petersburg], andrey).
+cityVisited(ufa, vasya).
+cityVisited(samara, petya).
+cityVisited(kransodar, sergey).
+cityVisited(moscow, sergey).
+cityVisited(petersburg, andrey).
 
-cityVisited([habarovsk], sveta).
-cityVisited([kazan], nastya).
+findRedHairedMan(N) :- hairColor(N, redhaired),
+                       man(N), 
+                       age(N, A),
+                       A > 18, write(N), writeln(": "), !, 
+                       cityVisited(C, N),
+                       writeln(C), fail.
 
-findRedHairedMan() :- man(N), age(N, A), A > 18,
-                      hairColor(N, redhaired),
-                      cityVisited(C, N), !, writeln(C).
-
-:- initialization((findRedHairedMan())).
+:- initialization((findRedHairedMan(N), write(N))).

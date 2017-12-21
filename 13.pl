@@ -16,3 +16,5 @@ parent(vera, galina).
 
 ancestor(A, B) :- parent(B, A).
 ancestor(A, B) :- parent(Z, A), ancestor(Z, B).
+
+allAncestors(A) :- parent(A, B), writeln(B), allAncestors(B). 

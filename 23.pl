@@ -28,12 +28,3 @@ runFindSortes(apple, Type) :- appleTree(X, Type),
 runFindSortes(pear, Type) :- pearTree(X, Type),
                              writeln(X),
                              fail.
-
-                             /*
-checkSortes(apple, _) :- appleTree(_, X),
-                         T = X.
-
-checkSortes(pear, _) :- pearTree(_, X),
-                        T = X.
-                                
-checkSortes(_, _) :- writeln("sorry, no info about this"), fail.*/

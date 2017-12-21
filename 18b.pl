@@ -3,7 +3,7 @@
 */
 
 isSubset([H|T], List2) :- append(L, [H|_], List2), !,
-                      last(T, Tast), !,
+                      last(T, TLast), !,
                       append(_, [TLast|R], List2), !,
                       append(L, [H], LH),
                       append(LH, T, M),
